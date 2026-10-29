@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indus Civilization</title>
+<link rel="icon" id="favicon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#/home"><span class="mark" id="logoMark"></span><span><b id="siteName"></b><small id="siteTag"></small></span></a>
+    <nav id="nav">
+      <a href="#/home" data-p="home">Home</a>
+      <a href="#/about" data-p="about">About</a>
+      <a href="#/cities" data-p="cities">Cities</a>
+      <a href="#/life" data-p="life">Daily Life</a>
+      <a href="#/trade" data-p="trade">Trade</a>
+      <a href="#/achievements" data-p="achievements">Achievements</a>
+      <a href="#/script" data-p="script">Script</a>
+      <a href="#/gallery" data-p="gallery">Gallery</a>
+      <div class="dd" id="ddResearch"><a href="#/articles" data-p="articles">Research ▾</a>
+        <div class="ddm">
+          <a href="#/articles" data-p="articles">Research Articles</a>
+          <a href="#/videos" data-p="videos">Videos</a>
+          <a href="#/library" data-p="library">Books &amp; PDFs</a>
+          <a href="#/websites" data-p="websites">Websites</a>
+          <a href="#/sindhu" data-p="sindhu">Sindhu Prakrit</a>
+        </div></div>
+      <a href="#/contact" data-p="contact">Contact</a>
+      <a href="#/cms" data-p="cms">CMS</a>
+    </nav>
+    <button class="sbtn" id="sBtn" aria-label="Search"></button>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </div>
+  <div class="searchbar" id="sBar" hidden><div><input id="sIn" placeholder="Search articles, cities, videos, books, gallery…" autocomplete="off"><div id="sres"></div></div></div>
+</header>
+
+<!-- HOME -->
+<div class="page" data-page="home">
+  <section class="hero noimg">
+    <div class="hero-in">
+      <div class="seal" id="seal"></div>
+      <div>
+        <small class="k" id="hKicker"></small>
+        <h1 id="hTitle"></h1><h2 id="hDates"></h2><p id="hText"></p>
+        <a class="btn" href="#/about" id="hBtn"></a>
+      </div>
+    </div>
+  </section>
+  <div class="strip" id="strip"></div>
+  <main class="wrap">
+    <section class="about">
+      <div>
+        <div class="eyebrow">ABOUT THE INDUS CIVILIZATION</div>
+        <h2 id="aTitle"></h2><p id="aText"></p>
+        <a class="btn dark" href="#/about">Learn More About It →</a>
+      </div>
+      <div class="slider"><img class="slide" id="slideImg" alt="" onerror="this.style.visibility='hidden'"><div class="cap" id="slideCap"></div><div class="dots" id="dots"></div></div>
+      <aside class="facts"><div class="eyebrow">QUICK FACTS</div><div id="facts"></div></aside>
+    </section>
+    <div class="head"><h2>Gallery</h2><a href="#/gallery">View All →</a></div>
+    <div class="gal" id="homeGal"></div>
+    <div class="head"><h2>Latest Research Articles</h2><a href="#/articles">View All →</a></div>
+    <div class="cards" id="homeArticles"></div>
+    <div class="head"><h2>Videos</h2><a href="#/videos">View All →</a></div>
+    <div class="cards" id="homeVideos"></div>
+    <div class="head"><h2>Books &amp; PDFs</h2><a href="#/library">View All →</a></div>
+    <div class="cards" id="homeLibrary"></div>
+    <div class="scriptbox">
+      <div><h3 class="scTitle"></h3><div class="glyph scGlyph"></div><p class="scNote"></p></div>
+      <a class="btn scBtn" href="#" style="margin:0">Download Indus Font</a>
+    </div>
+  </main>
+</div>
+
+<!-- TOPIC PAGES: cities, life, trade, achievements, script -->
+<div class="page" data-page="topic" hidden><main class="wrap">
+  <div class="pagehead"><h1 id="tTitle"></h1><p id="tIntro"></p></div>
+  <div class="cards" id="tItems"></div>
+  <div class="scriptbox" id="tScript" hidden>
+    <div><h3 class="scTitle"></h3><div class="glyph scGlyph"></div><p class="scNote"></p></div>
+    <a class="btn scBtn" href="#" style="margin:0">Download Indus Font</a>
+  </div>
+</main></div>
+
+<div class="page" data-page="articles" hidden><main class="wrap">
+  <div class="pagehead"><h1>Research Articles</h1><p>Papers, essays and notes on the Indus Civilization.</p></div>
+  <div class="cards" id="allArticles"></div>
+</main></div>
+
+<div class="page" data-page="videos" hidden><main class="wrap">
+  <div class="pagehead"><h1>Videos</h1><p>Lectures and talks.</p></div>
+  <div class="cards" id="allVideos"></div>
+</main></div>
+
+<div class="page" data-page="library" hidden><main class="wrap">
+  <div class="pagehead"><h1>Books &amp; PDFs</h1><p>Read online or download.</p></div>
+  <div class="cards" id="allLibrary"></div>
+</main></div>
+
+<div class="page" data-page="websites" hidden><main class="wrap">
+  <div class="pagehead"><h1>Websites</h1><p>Useful links for further reading.</p></div>
+  <div class="cards" id="allWebsites"></div>
+</main></div>
+
+<div class="page" data-page="gallery" hidden><main class="wrap">
+  <div class="pagehead"><h1>Gallery</h1></div>
+  <div class="gal big" id="allGal"></div>
+</main></div>
+
+<div class="page" data-page="sindhu" hidden><main class="wrap">
+  <div class="pagehead"><h1 id="spTitle"></h1></div>
+  <div class="prose" id="spText"></div>
+  <div class="cards" id="spPoints"></div>
+</main></div>
+
+<div class="page" data-page="about" hidden><main class="wrap">
+  <div class="pagehead"><h1 id="abTitle"></h1></div>
+  <div class="split"><div class="prose" id="abText" style="margin:0"></div><div id="abImg"></div></div>
+</main></div>
+
+<div class="page" data-page="contact" hidden><main class="wrap">
+  <div class="pagehead"><h1>Contact</h1><p id="ctIntro"></p></div>
+  <div class="split">
+    <div class="contactbox">
+      <div id="ctInfo"></div>
+      <h3 style="margin:18px 0 8px">Find us on</h3>
+      <div class="pills" id="ctPlatforms"></div>
+    </div>
+    <div class="contactbox">
+      <h3 style="margin-bottom:8px">Send a message</h3>
+      <label>Your name</label><input id="mName">
+      <label>Message</label><textarea id="mBody" style="min-height:110px"></textarea>
+      <button class="btn dark" id="mSend" style="margin-top:4px">Send by email</button>
+    </div>
+  </div>
+</main></div>
+
+<div class="page" data-page="cms" hidden><div class="cms" id="cmsRoot"></div></div>
+
+<footer>
+  <div class="fgrid">
+    <div><h4 id="fName"></h4><p id="fAbout"></p></div>
+    <div><h4>Quick Links</h4><ul>
+      <li><a href="#/about">About</a></li><li><a href="#/articles">Research Articles</a></li><li><a href="#/videos">Videos</a></li>
+      <li><a href="#/library">Books &amp; PDFs</a></li><li><a href="#/websites">Websites</a></li><li><a href="#/gallery">Gallery</a></li></ul></div>
+    <div><h4>Follow Us</h4><ul id="fSocial"></ul></div>
+    <div><h4>Get In Touch</h4><div id="fContact"></div></div>
+  </div>
+  <div class="fbottom"><span id="fTag"></span><span>© 2026 <span id="fCopy"></span>. All rights reserved.</span></div>
+</footer>
+
+<input type="file" id="filePick" hidden>
+<script src="script.js"></script>
+</body>
+</html>
